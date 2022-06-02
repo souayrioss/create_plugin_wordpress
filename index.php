@@ -8,7 +8,7 @@
  */
 
 
-add_shortcode('saida', function () {
+add_shortcode('oussama', function () {
     send_email();
     Form();
 });
