@@ -56,10 +56,10 @@ function send_email()
     }
 }
 
-add_action('admin_menu', function () {
-    add_menu_page('Messages','contact form','edit_posts','contact_form','callback_fct','dashicons-media-spreadsheet');  
-    add_submenu_page( 'contact_form','Child Menu','Child Menu','manage_options','Custom_sub_menu','list_emails');
-});
+// add_action('admin_menu', function () {
+//     add_menu_page('Messages','contact form','edit_posts','contact_form','callback_fct','dashicons-media-spreadsheet');  
+//     add_submenu_page( 'contact_form','Child Menu','Child Menu','manage_options','Custom_sub_menu','list_emails');
+// });
 
 function callback_fct(){  
     echo '<div class="d-flex justify-content-center">';
@@ -73,7 +73,7 @@ function list_emails()
     $results = $wpdb->get_results("SELECT * FROM `wp_plugin` ;");
     ?>
     <div class="d-flex justify-content-center align-item-center">
-      <h1>Emails</h1>
+        <h1>Emails</h1>
     </div>  
     <table class="table">
         <?php if (count($results) < 1) { ?>
@@ -100,7 +100,7 @@ function list_emails()
         <?php } ?>
 
     </table>
- <?php
+<?php
 }
 
 
